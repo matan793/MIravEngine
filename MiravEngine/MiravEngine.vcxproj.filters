@@ -18,11 +18,11 @@
     <ClCompile Include="src\Mirav\Application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Mirav\Log.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Mirav.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\Mirav\Application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -30,6 +30,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Mirav\EntryPoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Mirav\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Mirav.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

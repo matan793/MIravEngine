@@ -1,0 +1,3 @@
+[submodule "MiravEngine/extlibs/spdlog"]
+	path = MiravEngine/extlibs/spdlog
+	url = https://github.com/gabime/spdlog

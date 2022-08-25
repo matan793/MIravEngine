@@ -1,5 +1,4 @@
 #include "Application.h"
-
 namespace Mirav {
 
 	Application::Application()
