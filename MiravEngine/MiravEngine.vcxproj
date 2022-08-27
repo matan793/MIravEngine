@@ -57,7 +57,9 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>MV_PLATFORM_WINDOWS;MV_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>extlibs\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;extlibs\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>mvpch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -72,7 +74,9 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>MV_PLATFORM_WINDOWS;MV_BUILD_DLL;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>extlibs\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;extlibs\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>mvpch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -84,13 +88,24 @@
   <ItemGroup>
     <ClCompile Include="src\Mirav\Application.cpp" />
     <ClCompile Include="src\Mirav\Log.cpp" />
+    <ClCompile Include="src\mvpch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">mvpch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">mvpch.h</PrecompiledHeaderFile>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Mirav.h" />
     <ClInclude Include="src\Mirav\Application.h" />
     <ClInclude Include="src\Mirav\Core.h" />
     <ClInclude Include="src\Mirav\EntryPoint.h" />
+    <ClInclude Include="src\Mirav\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Mirav\Events\Event.h" />
+    <ClInclude Include="src\Mirav\Events\KeyEvent.h" />
+    <ClInclude Include="src\Mirav\Events\MouseEvent.h" />
     <ClInclude Include="src\Mirav\Log.h" />
+    <ClInclude Include="src\mvpch.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -5,7 +5,6 @@ class Sandbox : public Mirav::Application
 public:
 	Sandbox()
 	{
-
 	}
 
 	~Sandbox()

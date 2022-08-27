@@ -7,8 +7,10 @@ extern Mirav::Application* Mirav::CreateApplication();
 int main(int argc, char** argv)
 {
 	Mirav::Log::Init();
-	MV_CORE_INFO("good");
-	MV_CRITICAL("not good");
+	MV_CORE_WARN("Initialized Log!");
+	int a = 5;
+	MV_INFO("Hello! Var={0}", a);
+	
 	auto app = Mirav::CreateApplication();
 	app->Run();
 	delete app;
