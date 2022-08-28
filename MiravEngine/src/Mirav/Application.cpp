@@ -15,9 +15,8 @@ namespace Mirav {
 
 	void Application::Run()
 	{
-		WindowResizeEvent e(1280, 720);
-		MV_WARN(e);
-		std::cout << "nigger ";
+		WindowCloseEvent e = WindowCloseEvent();
+		MV_CRITICAL(e);
 		while (true);
 	}
 
