@@ -35,6 +35,8 @@
       <Filter>Mirav</Filter>
     </ClInclude>
     <ClInclude Include="src\mvpch.h" />
+    <ClInclude Include="src\Mirav\Window.h" />
+    <ClInclude Include="src\Mirav\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Mirav\Application.cpp">
@@ -44,5 +46,6 @@
       <Filter>Mirav</Filter>
     </ClCompile>
     <ClCompile Include="src\mvpch.cpp" />
+    <ClCompile Include="src\Mirav\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

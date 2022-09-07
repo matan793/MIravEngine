@@ -13,7 +13,7 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "MiravEngine/extlibs/GLFW/include"
 
-include "MiravEngine/extlibs	/GLFW"
+include "MiravEngine/extlibs/GLFW"
 
 
 project "MiravEngine"
@@ -31,13 +31,14 @@ project "MiravEngine"
 	{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp"
-		"%{IncludeDir.GLFW}"
+
 	}
 
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/extlibs/spdlog/include"
+		"%{prj.name}/extlibs/spdlog/include",
+		"%{IncludeDir.GLFW}"
 	}
 
 	links 
