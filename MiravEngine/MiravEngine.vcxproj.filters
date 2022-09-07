@@ -7,6 +7,12 @@
     <Filter Include="Mirav\Events">
       <UniqueIdentifier>{08708566-F4D2-140B-9D58-4DC1899AE08D}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Mirav\Platform">
+      <UniqueIdentifier>{7899BF39-6467-B33F-4DFB-236639688FA4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mirav\Platform\Windows">
+      <UniqueIdentifier>{B23BAB08-9E35-D45A-87A2-6A6B733B3AC7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Mirav.h" />
@@ -31,21 +37,39 @@
     <ClInclude Include="src\Mirav\Events\MouseEvent.h">
       <Filter>Mirav\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Mirav\Layer.h">
+      <Filter>Mirav</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Mirav\LayerStack.h">
+      <Filter>Mirav</Filter>
+    </ClInclude>
     <ClInclude Include="src\Mirav\Log.h">
       <Filter>Mirav</Filter>
     </ClInclude>
+    <ClInclude Include="src\Mirav\Platform\Windows\WindowsWindow.h">
+      <Filter>Mirav\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Mirav\Window.h">
+      <Filter>Mirav</Filter>
+    </ClInclude>
     <ClInclude Include="src\mvpch.h" />
-    <ClInclude Include="src\Mirav\Window.h" />
-    <ClInclude Include="src\Mirav\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Mirav\Application.cpp">
       <Filter>Mirav</Filter>
     </ClCompile>
+    <ClCompile Include="src\Mirav\Layer.cpp">
+      <Filter>Mirav</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Mirav\LayerStack.cpp">
+      <Filter>Mirav</Filter>
+    </ClCompile>
     <ClCompile Include="src\Mirav\Log.cpp">
       <Filter>Mirav</Filter>
     </ClCompile>
+    <ClCompile Include="src\Mirav\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Mirav\Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\mvpch.cpp" />
-    <ClCompile Include="src\Mirav\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>
