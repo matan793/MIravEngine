@@ -12,9 +12,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "MiravEngine/extlibs/GLFW/include"
+IncludeDir["Glad"] = "MiravEngine/extlibs/Glad/include"
 
 include "MiravEngine/extlibs/GLFW"
-
+include "MiravEngine/extlibs/Glad"
 
 project "MiravEngine"
 	location "MiravEngine"
@@ -38,12 +39,14 @@ project "MiravEngine"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/extlibs/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links 
 	{ 
 		"GLFW",
+		"GLAD",
 		"opengl32.lib"
 	}
 
@@ -56,7 +59,8 @@ project "MiravEngine"
 		defines
 		{
 			"MV_PLATFORM_WINDOWS",
-			"MV_BUILD_DLL"
+			"MV_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
